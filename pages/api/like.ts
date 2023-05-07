@@ -69,7 +69,7 @@ export default async function handler(
         id: postId,
       },
       data: {
-        liked: updatedLikedIds,
+        likes: updatedLikedIds,
       },
     })
 
