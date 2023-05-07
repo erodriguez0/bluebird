@@ -14,10 +14,10 @@ const useLike = ({ postId, userId }: { postId: string; userId?: string }) => {
   const loginModal = useLoginModal()
 
   const hasLiked = useMemo(() => {
-    const list = fetchedPost?.liked || []
+    const list = fetchedPost?.likes || []
 
     return list.includes(currentUser?.id)
-  }, [fetchedPost?.liked, currentUser?.id])
+  }, [fetchedPost?.likes, currentUser?.id])
 
   const toggleLike = useCallback(async () => {
     if (!currentUser) return loginModal.onOpen()
