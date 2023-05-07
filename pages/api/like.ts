@@ -24,7 +24,7 @@ export default async function handler(
 
     if (!post) throw new Error('Invalid ID')
 
-    let updatedLikedIds = [...(post.liked || [])]
+    let updatedLikedIds = [...(post.likes || [])]
 
     if (req.method === 'POST') {
       updatedLikedIds.push(currentUser.id)
